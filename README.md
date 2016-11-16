@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # location-one
 
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.7.3.
@@ -29,3 +30,6 @@ Run `grunt build` for building and `grunt serve` for preview.
 ## Testing
 
 Running `npm test` will run the unit tests with karma.
+=======
+# location-one
+>>>>>>> 70e38d37947d903c9a18f91d3d4307735eaaabb0
