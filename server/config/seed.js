@@ -6,6 +6,7 @@
 'use strict';
 import Thing from '../api/thing/thing.model';
 import User from '../api/user/user.model';
+import Store from '../api/store/store.model';
 
 Thing.find({}).remove()
   .then(() => {
