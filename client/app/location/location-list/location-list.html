@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 row">
+      <h1>Stores</h1>
+    </div>
+    <div class="col-xs-12 row">
+      <input type="button" class="btn btn-primary pull-right" value="Add Store" ui-sref="location-form">
+    </div>
+    <div class="col-xs-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="text-center"><span>Store Name</span></th>
+            <th class="text-center"><span>Store Address</span></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="store in data">
+            <td class="text-center" ng-bind="store.name"></td>
+            <td class="text-center" ng-bind="store.address"></td>
+            <td class="row">
+              <input type="button" class="btn btn-danger btn-sm pull-right" value="Delete" ng-click="delete(store)">
+              <input type="button" class="btn btn-primary btn-sm pull-right" value="Edit" ui-sref="location-form({ data : store })">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
