@@ -23,7 +23,7 @@ class LocationListComponent {
           console.log(err);
         }
       });
-    }
+    };
 
     get();
   }
