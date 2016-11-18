@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="row">
+    <ng-map center="current-location" map-lazy-load zoom="14">
+      <marker ng-repeat="pos in positions" position="{{pos}}"></marker>
+    </ng-map>
+  </div>
+</div>
