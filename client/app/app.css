@@ -38,3 +38,22 @@
   padding: 0.2em 0;
 }
 
+.option {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.here {
+  background-color: white;
+  border-radius: 3px;
+}
+
+.map {
+  width: 60%;
+  float: left;
+}
+
+.direction-panel {
+  overflow: auto;
+  height: 300px;
+}
