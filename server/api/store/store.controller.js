@@ -68,7 +68,7 @@ export function searchNearBy(req, res) {
             coordinates : [ parseFloat(req.params.longhitude), parseFloat(req.params.latitude) ]
           },
           $minDistance: 10,
-          $maxDistance: 7000
+          $maxDistance: 1800
         }
       }
     }).exec()
