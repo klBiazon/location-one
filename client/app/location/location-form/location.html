@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 row">
-      <h1>Add Store</h1>
+      <h2>Stores</h2>
     </div>
     <div class="col-sm-12">
       <form class="form" name="form" ng-submit="addStore(data)" >
         <div class="form-group">
           <label>Name:</label>
-          <input type="text" name="name" class="form-control" ng-model="data.name" placeholder="Enter Store Name"/>
+          <input type="text" name="name" class="form-control" ng-model="data.name" placeholder="Enter Store Name" ng-required="true"/>
         </div>
         <div class="form-group">
           <label>Address:</label>
@@ -15,21 +15,22 @@
             class="form-control"
             ng-model="data.address"
             types="['establishment']"
-            on-place-changed="placeChanged()" /> <br/>
+            on-place-changed="placeChanged()"
+            ng-required="true"/> <br/>
         </div>
         <div class="form-group">
           <ng-map center="current-location" map-lazy-load zoom="17" ng-if="count === 0">
-            <marker position="current-location">
+            <marker position="current-location" on-click="bounce()">
             </marker>
           </ng-map>
           <ng-map center="{{data.geoLocation.coordinates[1]}}, {{data.geoLocation.coordinates[0]}}" map-lazy-load zoom="17" ng-if="count > 0">
-            <marker position="{{data.geoLocation.coordinates[1]}}, {{data.geoLocation.coordinates[0]}}">
+            <marker position="{{data.geoLocation.coordinates[1]}}, {{data.geoLocation.coordinates[0]}}" on-click="bounce()">
             </marker>
           </ng-map>
         </div>
         <div class="form-group pull-right">
           <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary" ng-bind="edit ? 'Edit Store' : 'Add Store'"></button>
-          <button type="button" ng-disabled="form.$invalid" class="btn btn-default" ng-bind="'Back'" ui-sref="location"></button>
+          <button type="button" class="btn btn-default" ng-bind="'Back'" ui-sref="location"></button>
         </div>
       </form>
     </div>
