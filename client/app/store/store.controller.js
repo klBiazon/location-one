@@ -10,6 +10,7 @@
       $scope.option = true;
       $scope.showDirection = false;
       $scope.storeDirection = '';
+      $scope.modeOfTravel = 'DRIVING';
 
       function searchNearBy (place) {
         $scope.positions = [];
@@ -17,19 +18,19 @@
           navigator.geolocation.getCurrentPosition(function (position) {
             $scope.current = [position.coords.latitude, position.coords.longitude];
             $timeout(function () {
-              $scope.setNearByStores(position.coords);
+              setNearByStores(position.coords);
             }, 1000);
           });
         } else {
           $scope.current = [place.latitude, place.longitude];
           $timeout(function () {
-            $scope.setNearByStores(place);
+            setNearByStores(place);
           }, 1000);
         }
       }
 
-      $scope.setNearByStores = function(position) {
-        API.get(`stores/location/near/` + position.longitude + `/` + position.latitude, '', function(res, err) {
+      function setNearByStores (position) {
+        API.get('stores/location/near/' + position.longitude + '/' + position.latitude, '', function(res, err) {
           if (!err) {
             $scope.stores = res;
             var location = [];
@@ -63,10 +64,6 @@
           latitude: this.getPlace().geometry.location.lat()
         }
         searchNearBy(place);
-      };
-
-      $scope.bounce = function() {
-        this.setAnimation(google.maps.Animation.BOUNCE);
       };
 
       $scope.direction = function(store) {
