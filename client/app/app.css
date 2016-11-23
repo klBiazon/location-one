@@ -38,3 +38,38 @@
   padding: 0.2em 0;
 }
 
+.option {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.here {
+  background-color: white;
+  border-radius: 3px;
+}
+
+.map {
+  width: 60%;
+  float: left;
+}
+
+.direction-panel {
+  overflow: auto;
+  height: 265px;
+}
+
+.mode-travel {
+  width: 100%;
+}
+
+.travel-option {
+  margin-top: 4px;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.caret {
+  margin-top: 8px;
+}

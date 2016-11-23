@@ -21,7 +21,7 @@
           ]
         };
         $scope.count = Object.keys($scope.data).length;
-      }
+      };
 
       $scope.addStore = function(data) {
         if ($scope.edit) {
@@ -41,8 +41,8 @@
             }
           }, data);
         }
-      }
-    }
+      };
+    };
   }
 
   angular.module('locationOneApp')
