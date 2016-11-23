@@ -42,10 +42,6 @@
           }, data);
         }
       };
-
-      $scope.bounce = function() {
-        this.setAnimation(google.maps.Animation.BOUNCE);
-      };
     };
   }
 

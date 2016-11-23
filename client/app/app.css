@@ -55,5 +55,21 @@
 
 .direction-panel {
   overflow: auto;
-  height: 300px;
+  height: 265px;
+}
+
+.mode-travel {
+  width: 100%;
+}
+
+.travel-option {
+  margin-top: 4px;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.caret {
+  margin-top: 8px;
 }

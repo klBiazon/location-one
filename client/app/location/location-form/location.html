@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 row">
-      <h2>Stores</h2>
+      <h2>Store</h2>
     </div>
     <div class="col-sm-12">
       <form class="form" name="form" ng-submit="addStore(data)" >
@@ -20,11 +20,11 @@
         </div>
         <div class="form-group">
           <ng-map center="current-location" map-lazy-load zoom="17" ng-if="count === 0">
-            <marker position="current-location" on-click="bounce()">
+            <marker position="current-location" animation="Animation.BOUNCE">
             </marker>
           </ng-map>
           <ng-map center="{{data.geoLocation.coordinates[1]}}, {{data.geoLocation.coordinates[0]}}" map-lazy-load zoom="17" ng-if="count > 0">
-            <marker position="{{data.geoLocation.coordinates[1]}}, {{data.geoLocation.coordinates[0]}}" on-click="bounce()">
+            <marker position="{{data.geoLocation.coordinates[1]}}, {{data.geoLocation.coordinates[0]}}" animation="Animation.BOUNCE">
             </marker>
           </ng-map>
         </div>
